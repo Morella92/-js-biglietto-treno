@@ -1,3 +1,6 @@
+
+const titleElement = document.getElementById("ticket-price")
+console.log(titleElement)
 // Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio, secondo queste regole:
 
 // il numero di chilometri che vuole percorrere
@@ -17,16 +20,19 @@ let discount = 0
 // 2-va applicato uno sconto del 20% per i minorenni
 // 3-va applicato uno sconto del 40% per gli over 65
 // 4- Prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo)
+
+
 if (agePassenger <= 18) {
-    discount = 0.2;
-    let discountPrice = (ticketPrice - (ticketPrice * discount)) 
-    let roundedPrice = parseFloat(discountPrice.toFixed(2))
-    console.log('Il prezzo scontato è:' + roundedPrice)
+    discount = 0.2;  
 } else if (agePassenger >= 65) {
     discount = 0.4;
-    let discountPrice = (ticketPrice - (ticketPrice * discount))
-    let roundedPrice = parseFloat(discountPrice.toFixed(2))
-    console.log('Il prezzo scontato è:' + roundedPrice)
+    // let discountPrice = (ticketPrice - (ticketPrice * discount))
+    // let roundedPrice = parseFloat(discountPrice.toFixed(2))
+    // console.log('Il prezzo scontato è:' + roundedPrice)
 }
 
+let discountPrice = (ticketPrice - (ticketPrice * discount)) 
+let roundedPrice = parseFloat(discountPrice.toFixed(2))
+console.log('Il prezzo scontato è:' + roundedPrice)
 
+document.write('Il prezzo scontato è: ' + roundedPrice)
