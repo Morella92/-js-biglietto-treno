@@ -17,17 +17,16 @@ let discount = 0
 // 2-va applicato uno sconto del 20% per i minorenni
 // 3-va applicato uno sconto del 40% per gli over 65
 // 4- Prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo)
-
 if (agePassenger <= 18) {
     discount = 0.2;
     let discountPrice = (ticketPrice - (ticketPrice * discount)) 
     let roundedPrice = parseFloat(discountPrice.toFixed(2))
-    console.log('Il prezzo scontato del 20% è:' + roundedPrice)
+    console.log('Il prezzo scontato è:' + roundedPrice)
 } else if (agePassenger >= 65) {
     discount = 0.4;
     let discountPrice = (ticketPrice - (ticketPrice * discount))
     let roundedPrice = parseFloat(discountPrice.toFixed(2))
-    console.log('Il prezzo scontato del 20% è:' + roundedPrice)
+    console.log('Il prezzo scontato è:' + roundedPrice)
 }
 
 
