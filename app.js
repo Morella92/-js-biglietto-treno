@@ -25,10 +25,16 @@ let discount = 0
 
 if (agePassenger <= 18) {
     discount = 0.2;
-    console.log(ticketPrice * discount)
+    console.log(ticketPrice - (ticketPrice * discount)) 
 } else if (agePassenger >= 65) {
     discount = 0.4;
-    console.log(ticketPrice * discount)
+    console.log(ticketPrice - (ticketPrice * discount))
 }
 
+// Prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo)
+
+
+// var num = 3.14159265359;
+// var rounded = parseFloat(num.toFixed(2));
+// console.log(rounded); // output: 3.14
 
